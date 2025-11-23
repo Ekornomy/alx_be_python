@@ -1,4 +1,3 @@
-
 import datetime
 
 def display_current_datetime():
@@ -14,24 +13,7 @@ def calculate_future_date(days):
     print(f"Future date: {formatted_future_date}")
     return future_date
 
-def main():
-    print("=== DateTime Exploration ===")
-    
-    print("\n--- Part 1: Current Date and Time ---")
-    current_date = display_current_datetime()
-    
-    print("\n--- Part 2: Future Date Calculation ---")
-    try:
-        days_input = input("Enter the number of days to add to the current date: ")
-        days = int(days_input)
-        
-        if days < 0:
-            print("Please enter a non-negative number of days.")
-        else:
-            future_date = calculate_future_date(days)
-            
-    except ValueError:
-        print("Invalid input. Please enter a valid integer.")
+display_current_datetime()
 
-if __name__ == "__main__":
-    main()
+days = int(input("Enter the number of days to add to the current date: "))
+calculate_future_date(days)
